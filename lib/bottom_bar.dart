@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:hallo_app/screen/home_screen.dart';
 
 class botton_bar extends StatefulWidget {
   void Function(int)? onTabhange;
@@ -19,9 +20,14 @@ class _botton_barState extends State<botton_bar> {
     });
   }
 
+  final pages = [
+    HomeScreen(),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      body: pages[_clickedIndex],
 //-----------------bottombar details-------------------------------//
       bottomNavigationBar: BottomNavigationBar(
           selectedItemColor: Colors.black,

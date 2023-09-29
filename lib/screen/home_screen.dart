@@ -13,11 +13,11 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int activeIndex = 0;
-  final imagePaths = [
+  final caroselImages = [
     'assets/images/sliderimage.png',
     'assets/images/sliderimage.png',
     'assets/images/sliderimage.png',
-    'assets/images/sliderimage.png'
+    'assets/images/sliderimage.png',
   ];
 
   @override
@@ -50,262 +50,272 @@ class _HomeScreenState extends State<HomeScreen> {
           )
         ],
       ),
-      body: Column(
-        children: [
-          SizedBox(
-            height: 30,
-          ),
-          Column(
-            children: [
-              CarouselSlider.builder(
-                itemCount: imagePaths.length,
-                itemBuilder: (context, index, realIndex) {
-                  final imagePath = imagePaths[index];
-                  return buildImage(imagePath, index);
-                },
-                options: CarouselOptions(
-                  height: 150,
-                  autoPlay: true,
-                  viewportFraction: 1,
-                  onPageChanged: (index, reason) =>
-                      setState(() => activeIndex = index),
-                ),
-              ),
-              builderIndicator()
-            ],
-          ),
-          SizedBox(
-            height: 50,
-          ),
-          SizedBox(
-            height: 100,
-            child: ListView(
-              scrollDirection: Axis.horizontal,
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            SizedBox(
+              height: 30,
+            ),
+            Column(
               children: [
-                Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: CircleAvatar(
-                        backgroundImage:
-                            AssetImage('assets/images/flag_america.png'),
-                        radius: 25,
-                      ),
-                    ),
-                    Text(
-                      'Adil',
-                      style: TextStyle(
-                        fontSize: 13,
-                        color: Colors.black,
-                      ),
-                    )
-                  ],
+                CarouselSlider.builder(
+                  itemCount: caroselImages.length,
+                  itemBuilder: (context, index, realIndex) {
+                    final imagePath = caroselImages[index];
+                    return buildImage(imagePath, index);
+                  },
+                  options: CarouselOptions(
+                    height: 190,
+                    autoPlay: true,
+                    viewportFraction: 1,
+                    onPageChanged: (index, reason) =>
+                        setState(() => activeIndex = index),
+                  ),
                 ),
-                Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: CircleAvatar(
-                        backgroundImage:
-                            AssetImage('assets/images/flag_america.png'),
-                        radius: 25,
-                      ),
-                    ),
-                    Text(
-                      'Shabeer',
-                      style: TextStyle(
-                        fontSize: 13,
-                        color: Colors.black,
-                      ),
-                    )
-                  ],
+                SizedBox(
+                  height: 20,
                 ),
-                Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: CircleAvatar(
-                        backgroundImage:
-                            AssetImage('assets/images/flag_america.png'),
-                        radius: 25,
-                      ),
-                    ),
-                    Text(
-                      'Aysha',
-                      style: TextStyle(
-                        fontSize: 13,
-                        color: Colors.black,
-                      ),
-                    )
-                  ],
-                ),
-                Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: CircleAvatar(
-                        backgroundImage:
-                            AssetImage('assets/images/flag_america.png'),
-                        radius: 25,
-                      ),
-                    ),
-                    Text(
-                      'Rashiq',
-                      style: TextStyle(
-                        fontSize: 13,
-                        color: Colors.black,
-                      ),
-                    )
-                  ],
-                ),
-                Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: CircleAvatar(
-                        backgroundImage:
-                            AssetImage('assets/images/flag_america.png'),
-                        radius: 25,
-                      ),
-                    ),
-                    Text(
-                      'Rahma',
-                      style: TextStyle(
-                        fontSize: 13,
-                        color: Colors.black,
-                      ),
-                    )
-                  ],
-                ),
-                Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: CircleAvatar(
-                        backgroundImage:
-                            AssetImage('assets/images/flag_america.png'),
-                        radius: 25,
-                      ),
-                    ),
-                    Text(
-                      'John',
-                      style: TextStyle(
-                        fontSize: 13,
-                        color: Colors.black,
-                      ),
-                    )
-                  ],
-                ),
-                Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: CircleAvatar(
-                        backgroundImage:
-                            AssetImage('assets/images/flag_america.png'),
-                        radius: 25,
-                      ),
-                    ),
-                    Text(
-                      'Akbar',
-                      style: TextStyle(
-                        fontSize: 13,
-                        color: Colors.black,
-                      ),
-                    )
-                  ],
-                ),
-                Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: CircleAvatar(
-                        backgroundImage:
-                            AssetImage('assets/images/flag_america.png'),
-                        radius: 25,
-                      ),
-                    ),
-                    Text(
-                      'Roney',
-                      style: TextStyle(
-                        fontSize: 13,
-                        color: Colors.black,
-                      ),
-                    )
-                  ],
-                ),
+                builderIndicator()
               ],
             ),
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          Column(
-            children: [
-              ListTile(
-                leading: Image.asset('assets/images/flag_america.png'),
-                title: Text(
-                  'InstaLesson',
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                ),
-                subtitle: Text('1-on-1 Lesson with a native teacher'),
-                trailing: Text(
-                  'Paid',
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                ),
+            SizedBox(
+              height: 20,
+            ),
+            SizedBox(
+              height: 100,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: [
+                  Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: CircleAvatar(
+                          backgroundImage:
+                              AssetImage('assets/images/flag_america.png'),
+                          radius: 25,
+                        ),
+                      ),
+                      Text(
+                        'Adil',
+                        style: TextStyle(
+                          fontSize: 13,
+                          color: Colors.black,
+                        ),
+                      )
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: CircleAvatar(
+                          backgroundImage:
+                              AssetImage('assets/images/flag_america.png'),
+                          radius: 25,
+                        ),
+                      ),
+                      Text(
+                        'Shabeer',
+                        style: TextStyle(
+                          fontSize: 13,
+                          color: Colors.black,
+                        ),
+                      )
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: CircleAvatar(
+                          backgroundImage:
+                              AssetImage('assets/images/flag_america.png'),
+                          radius: 25,
+                        ),
+                      ),
+                      Text(
+                        'Aysha',
+                        style: TextStyle(
+                          fontSize: 13,
+                          color: Colors.black,
+                        ),
+                      )
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: CircleAvatar(
+                          backgroundImage:
+                              AssetImage('assets/images/flag_america.png'),
+                          radius: 25,
+                        ),
+                      ),
+                      Text(
+                        'Rashiq',
+                        style: TextStyle(
+                          fontSize: 13,
+                          color: Colors.black,
+                        ),
+                      )
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: CircleAvatar(
+                          backgroundImage:
+                              AssetImage('assets/images/flag_america.png'),
+                          radius: 25,
+                        ),
+                      ),
+                      Text(
+                        'Rahma',
+                        style: TextStyle(
+                          fontSize: 13,
+                          color: Colors.black,
+                        ),
+                      )
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: CircleAvatar(
+                          backgroundImage:
+                              AssetImage('assets/images/flag_america.png'),
+                          radius: 25,
+                        ),
+                      ),
+                      Text(
+                        'John',
+                        style: TextStyle(
+                          fontSize: 13,
+                          color: Colors.black,
+                        ),
+                      )
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: CircleAvatar(
+                          backgroundImage:
+                              AssetImage('assets/images/flag_america.png'),
+                          radius: 25,
+                        ),
+                      ),
+                      Text(
+                        'Akbar',
+                        style: TextStyle(
+                          fontSize: 13,
+                          color: Colors.black,
+                        ),
+                      )
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: CircleAvatar(
+                          backgroundImage:
+                              AssetImage('assets/images/flag_america.png'),
+                          radius: 25,
+                        ),
+                      ),
+                      Text(
+                        'Roney',
+                        style: TextStyle(
+                          fontSize: 13,
+                          color: Colors.black,
+                        ),
+                      )
+                    ],
+                  ),
+                ],
               ),
-              ListTile(
-                leading: Image.asset('assets/images/flag_america.png'),
-                title: Text(
-                  'InstaMatch',
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Column(
+              children: [
+                ListTile(
+                  leading: Image.asset('assets/images/flag_america.png'),
+                  title: Text(
+                    'InstaLesson',
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  ),
+                  subtitle: Text('1-on-1 Lesson with a native teacher'),
+                  trailing: Text(
+                    'Paid',
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  ),
                 ),
-                subtitle: Text('Unlimited Practice with other students'),
-                trailing: Text(
-                  'Free',
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                SizedBox(
+                  height: 5,
                 ),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              ListTile(
-                leading: TextButton.icon(
+                ListTile(
+                  leading: Image.asset('assets/images/flag_america.png'),
+                  title: Text(
+                    'InstaMatch',
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  ),
+                  subtitle: Text('Unlimited Practice with other students'),
+                  trailing: Text(
+                    'Free',
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  ),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                ListTile(
+                  leading: TextButton.icon(
+                    onPressed: () {},
+                    icon: Icon(Icons.filter_alt_outlined),
+                    label: Text('Filter'),
+                    style: ButtonStyle(
+                        foregroundColor:
+                            MaterialStateProperty.all(Colors.grey)),
+                  ),
+                  trailing: TextButton.icon(
+                    onPressed: () {},
+                    icon: Icon(Icons.list_rounded),
+                    label: Text('InstaLog'),
+                    style: ButtonStyle(
+                        foregroundColor:
+                            MaterialStateProperty.all(Colors.grey)),
+                  ),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                ElevatedButton(
                   onPressed: () {},
-                  icon: Icon(Icons.filter_alt_outlined),
-                  label: Text('Filter'),
                   style: ButtonStyle(
-                      foregroundColor: MaterialStateProperty.all(Colors.grey)),
+                      shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(35))),
+                      fixedSize: MaterialStateProperty.all(Size(200, 50))),
+                  child: Text("Start Instamatching"),
                 ),
-                trailing: TextButton.icon(
-                  onPressed: () {},
-                  icon: Icon(Icons.list_rounded),
-                  label: Text('InstaLog'),
-                  style: ButtonStyle(
-                      foregroundColor: MaterialStateProperty.all(Colors.grey)),
-                ),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              ElevatedButton(
-                onPressed: () {},
-                style: ButtonStyle(
-                    shape: MaterialStateProperty.all(RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(35))),
-                    fixedSize: MaterialStateProperty.all(Size(200, 50))),
-                child: Text("Start Instamatching"),
-              ),
-            ],
-          )
-        ],
+              ],
+            )
+          ],
+        ),
       ),
     );
   }
 
   Widget builderIndicator() => AnimatedSmoothIndicator(
         activeIndex: activeIndex,
-        count: imagePaths.length,
+        count: caroselImages.length,
         effect: const WormEffect(
           dotWidth: 10,
           dotHeight: 10,

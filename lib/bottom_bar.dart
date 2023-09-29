@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:hallo_app/screen/course_screen.dart';
 import 'package:hallo_app/screen/home_screen.dart';
 
 class botton_bar extends StatefulWidget {
@@ -22,13 +23,14 @@ class _botton_barState extends State<botton_bar> {
 
   final pages = [
     HomeScreen(),
+    CourseScreen(),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: pages[_clickedIndex],
-//-----------------bottombar details-------------------------------//
+//-----------------bottom bar details-------------------------------//
       bottomNavigationBar: BottomNavigationBar(
           selectedItemColor: Colors.black,
           unselectedItemColor: Colors.grey,
@@ -42,13 +44,14 @@ class _botton_barState extends State<botton_bar> {
               label: "home",
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.search),
-              label: "search",
-            ),
-            BottomNavigationBarItem(
               icon: Icon(Icons.menu_book),
               label: "course",
             ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.search),
+              label: "search",
+            ),
+
             BottomNavigationBarItem(
               icon: Icon(Icons.person),
               label: "profile",

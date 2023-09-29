@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
 
@@ -158,10 +158,12 @@ class _CourseScreenState extends State<CourseScreen> {
             SizedBox(
               height: 10,
             ),
+
+            //-----------------------------img------------------------------------//
             SingleChildScrollView(
               child: Column(children: [
                 Image.asset(
-                  'assets/images/flag_america.png',
+                  'assets/images/courseimg1.png',
                 ),
                 SizedBox(
                   height: 10,
@@ -193,7 +195,7 @@ class _CourseScreenState extends State<CourseScreen> {
                 SizedBox(
                   height: 50,
                 ),
-                Image.asset('assets/images/flag_america.png'),
+                Image.asset('assets/images/courseimg2.png'),
                 SizedBox(
                   height: 10,
                 ),

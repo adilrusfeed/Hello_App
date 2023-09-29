@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class Explore extends StatefulWidget {
-  const Explore({super.key});
+class ExploreScreen extends StatefulWidget {
+  const ExploreScreen({super.key});
 
   @override
-  State<Explore> createState() => _ExploreState();
+  State<ExploreScreen> createState() => _ExploreScreenState();
 }
 
-class _ExploreState extends State<Explore> {
+class _ExploreScreenState extends State<ExploreScreen> {
   @override
   Widget build(BuildContext context) {
     return const Placeholder();

@@ -2,7 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:hallo_app/screen/course_screen.dart';
+import 'package:hallo_app/screen/explore_screen.dart';
 import 'package:hallo_app/screen/home_screen.dart';
+import 'package:hallo_app/screen/profile_screen.dart';
 
 class botton_bar extends StatefulWidget {
   void Function(int)? onTabhange;
@@ -24,6 +26,8 @@ class _botton_barState extends State<botton_bar> {
   final pages = [
     HomeScreen(),
     CourseScreen(),
+    ExploreScreen(),
+    ProfileScreen()
   ];
 
   @override

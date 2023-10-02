@@ -1,6 +1,7 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:hallo_app/bottom_bar.dart';
-import 'package:hallo_app/screen/course_screen.dart';
 
 void main() {
   runApp(MyApp());

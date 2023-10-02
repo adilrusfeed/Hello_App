@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, must_be_immutable, camel_case_types
 
 import 'package:flutter/material.dart';
 import 'package:hallo_app/screen/course_screen.dart';
@@ -26,8 +26,8 @@ class _botton_barState extends State<botton_bar> {
   final pages = [
     HomeScreen(),
     CourseScreen(),
-    ExploreScreen(),
-    ProfileScreen()
+    ExploreSCreen(),
+    ProfileScreen(),
   ];
 
   @override

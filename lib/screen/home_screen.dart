@@ -24,6 +24,8 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
+
+      //----------------------appbar-------------------------------//
       appBar: AppBar(
         backgroundColor: Colors.white,
         leading: Padding(
@@ -50,14 +52,14 @@ class _HomeScreenState extends State<HomeScreen> {
           )
         ],
       ),
+      //----------------------appbar-------------------------------//
       body: SingleChildScrollView(
         child: Column(
           children: [
-            SizedBox(
-              height: 30,
-            ),
+            sized(30),
             Column(
               children: [
+                //-----------------------carousel image-----------------------//
                 CarouselSlider.builder(
                   itemCount: caroselImages.length,
                   itemBuilder: (context, index, realIndex) {
@@ -72,178 +74,36 @@ class _HomeScreenState extends State<HomeScreen> {
                         setState(() => activeIndex = index),
                   ),
                 ),
-                SizedBox(
-                  height: 20,
-                ),
+                sized(20),
                 builderIndicator()
               ],
             ),
-            SizedBox(
-              height: 20,
-            ),
+            //-----------------------carousel image-----------------------//
+            sized(20),
             SizedBox(
               height: 100,
+              //-------------------------circle avatar----------------------//
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 children: [
-                  Column(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: CircleAvatar(
-                          backgroundImage:
-                              AssetImage('assets/images/flag_america.png'),
-                          radius: 25,
-                        ),
-                      ),
-                      Text(
-                        'Adil',
-                        style: TextStyle(
-                          fontSize: 13,
-                          color: Colors.black,
-                        ),
-                      )
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: CircleAvatar(
-                          backgroundImage:
-                              AssetImage('assets/images/flag_america.png'),
-                          radius: 25,
-                        ),
-                      ),
-                      Text(
-                        'Shabeer',
-                        style: TextStyle(
-                          fontSize: 13,
-                          color: Colors.black,
-                        ),
-                      )
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: CircleAvatar(
-                          backgroundImage:
-                              AssetImage('assets/images/flag_america.png'),
-                          radius: 25,
-                        ),
-                      ),
-                      Text(
-                        'Aysha',
-                        style: TextStyle(
-                          fontSize: 13,
-                          color: Colors.black,
-                        ),
-                      )
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: CircleAvatar(
-                          backgroundImage:
-                              AssetImage('assets/images/flag_america.png'),
-                          radius: 25,
-                        ),
-                      ),
-                      Text(
-                        'Rashiq',
-                        style: TextStyle(
-                          fontSize: 13,
-                          color: Colors.black,
-                        ),
-                      )
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: CircleAvatar(
-                          backgroundImage:
-                              AssetImage('assets/images/flag_america.png'),
-                          radius: 25,
-                        ),
-                      ),
-                      Text(
-                        'Rahma',
-                        style: TextStyle(
-                          fontSize: 13,
-                          color: Colors.black,
-                        ),
-                      )
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: CircleAvatar(
-                          backgroundImage:
-                              AssetImage('assets/images/flag_america.png'),
-                          radius: 25,
-                        ),
-                      ),
-                      Text(
-                        'John',
-                        style: TextStyle(
-                          fontSize: 13,
-                          color: Colors.black,
-                        ),
-                      )
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: CircleAvatar(
-                          backgroundImage:
-                              AssetImage('assets/images/flag_america.png'),
-                          radius: 25,
-                        ),
-                      ),
-                      Text(
-                        'Akbar',
-                        style: TextStyle(
-                          fontSize: 13,
-                          color: Colors.black,
-                        ),
-                      )
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: CircleAvatar(
-                          backgroundImage:
-                              AssetImage('assets/images/flag_america.png'),
-                          radius: 25,
-                        ),
-                      ),
-                      Text(
-                        'Roney',
-                        style: TextStyle(
-                          fontSize: 13,
-                          color: Colors.black,
-                        ),
-                      )
-                    ],
-                  ),
+                  circleavatar(
+                      image: "assets/images/adilpic.png", name: "Adil"),
+                  circleavatar(
+                      image: "assets/images/shabeer.png", name: "Shabeer"),
+                  circleavatar(image: "assets/images/aysha.jpg", name: "Aysha"),
+                  circleavatar(
+                      image: "assets/images/rashiq.jpg", name: "Rashiq"),
+                  circleavatar(image: "assets/images/rahma.jpg", name: "Rahma"),
+                  circleavatar(image: "assets/images/john.jpg", name: "John"),
+                  circleavatar(image: "assets/images/akbar.jpg", name: "Akbar"),
+                  circleavatar(
+                      image: "assets/images/anitha.jpg", name: "Anitha"),
                 ],
               ),
+              //-------------------------circle avatar----------------------//
             ),
-            SizedBox(
-              height: 20,
-            ),
+            sized(20),
+            //---------------------------customercare--------------------------//
             Column(
               children: [
                 ListTile(
@@ -258,9 +118,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                   ),
                 ),
-                SizedBox(
-                  height: 5,
-                ),
+                sized(5),
                 ListTile(
                   leading: Image.asset('assets/images/flag_america.png'),
                   title: Text(
@@ -273,9 +131,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                   ),
                 ),
-                SizedBox(
-                  height: 10,
-                ),
+                sized(10),
                 ListTile(
                   leading: TextButton.icon(
                     onPressed: () {},
@@ -294,9 +150,8 @@ class _HomeScreenState extends State<HomeScreen> {
                             MaterialStateProperty.all(Colors.grey)),
                   ),
                 ),
-                SizedBox(
-                  height: 10,
-                ),
+                //---------------------------customercare--------------------------//
+                sized(10),
                 ElevatedButton(
                   onPressed: () {},
                   style: ButtonStyle(
@@ -305,11 +160,39 @@ class _HomeScreenState extends State<HomeScreen> {
                       fixedSize: MaterialStateProperty.all(Size(200, 50))),
                   child: Text("Start Instamatching"),
                 ),
+                //---------------------------customercare--------------------------//
               ],
             )
           ],
         ),
       ),
+    );
+  }
+
+  SizedBox sized(double value) {
+    return SizedBox(
+      height: value,
+    );
+  }
+
+  Column circleavatar({required String image, required String name}) {
+    return Column(
+      children: [
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: CircleAvatar(
+            backgroundImage: AssetImage(image),
+            radius: 25,
+          ),
+        ),
+        Text(
+          name,
+          style: TextStyle(
+            fontSize: 13,
+            color: Colors.black,
+          ),
+        )
+      ],
     );
   }
 

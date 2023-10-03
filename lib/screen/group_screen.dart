@@ -17,6 +17,7 @@ class _GroupScreenState extends State<GroupScreen> {
         children: [
           Row(
             children: [
+              //--------------------dropdownlist----------------------------//
               Padding(
                 padding: const EdgeInsets.all(10),
                 child: Container(
@@ -101,6 +102,7 @@ class _GroupScreenState extends State<GroupScreen> {
                   ),
                 ),
               ),
+              //--------------------dropdownlist----------------------------//
             ],
           ),
           SingleChildScrollView(
@@ -143,9 +145,12 @@ class _GroupScreenState extends State<GroupScreen> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(
-                          'Brenda',
-                          style: TextStyle(fontWeight: FontWeight.bold),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 10),
+                          child: Text(
+                            'Brenda',
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
                         ),
                         Container(
                           child: Row(
@@ -204,9 +209,12 @@ class _GroupScreenState extends State<GroupScreen> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
-                        'Susan',
-                        style: TextStyle(fontWeight: FontWeight.bold),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 10),
+                        child: Text(
+                          'Susan',
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
                       ),
                       Container(
                         child: Row(

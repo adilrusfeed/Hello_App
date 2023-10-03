@@ -107,7 +107,7 @@ class _HomeScreenState extends State<HomeScreen> {
             Column(
               children: [
                 ListTile(
-                  leading: Image.asset('assets/images/flag_america.png'),
+                  leading: Image.asset('assets/images/interview.jpg'),
                   title: Text(
                     'InstaLesson',
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
@@ -120,7 +120,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 sized(5),
                 ListTile(
-                  leading: Image.asset('assets/images/flag_america.png'),
+                  leading: Image.asset('assets/images/interview2.jpeg'),
                   title: Text(
                     'InstaMatch',
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),

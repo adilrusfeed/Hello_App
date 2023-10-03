@@ -21,6 +21,7 @@ class _ExploreSCreenState extends State<ExploreSCreen> {
               child: Column(
             children: [
               Container(
+                //-------------search bar--------------------//
                 child: Padding(
                   padding: EdgeInsets.all(25),
                   child: TextField(
@@ -34,9 +35,13 @@ class _ExploreSCreenState extends State<ExploreSCreen> {
                   ),
                 ),
               ),
+
+              //-------------search bar--------------------//
               SizedBox(
-                height: 15,
+                height: 5,
               ),
+
+              //-------------Tab bar--------------------//
               TabBar(
                 labelColor: const Color.fromARGB(255, 255, 0, 0),
                 labelStyle: TextStyle(fontWeight: FontWeight.bold),
@@ -54,6 +59,8 @@ class _ExploreSCreenState extends State<ExploreSCreen> {
                 child: TabBarView(children: [GroupScreen(), OneToOneScreen()]),
               )
             ],
+
+            //-------------Tab bar--------------------//
           )),
         ));
   }

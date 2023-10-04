@@ -1,15 +1,11 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, use_key_in_widget_constructors
 
 import 'package:flutter/material.dart';
+import 'package:hallo_app/screen/home_screen.dart';
 
-class ProfileScreen extends StatefulWidget {
+class ProfileScreen extends StatelessWidget {
   const ProfileScreen({Key? key});
 
-  @override
-  State<ProfileScreen> createState() => _ProfileScreenState();
-}
-
-class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -204,6 +200,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     const SizedBox(
                       height: 10,
                     ),
+
+                    //----------------------------center container----------------------------------------------
                     Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
@@ -345,6 +343,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               ],
                             ),
                           )
+                          //----------------------------center container----------------------------------------------
                         ],
                       ),
                     ),
@@ -355,6 +354,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       decoration: const BoxDecoration(
                           border:
                               Border(bottom: BorderSide(color: Colors.grey))),
+
+                      //----------------------------icons--------------------------------------
                       child: const SizedBox(
                         height: 40,
                         child: Row(
@@ -376,6 +377,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         ),
                       ),
                     ),
+
+                    //=-------------------------text under icon--------------------------------------
                     const SizedBox(
                       height: 10,
                     ),
@@ -414,6 +417,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     const SizedBox(
                       height: 20,
                     ),
+
+                    //-----------------scrolling detail box     ---------------------------------------
                     SingleChildScrollView(
                       scrollDirection: Axis.horizontal,
                       child: Row(
@@ -596,6 +601,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ),
               ),
             ),
+
+            //-------------------floating button-------------------
+
             Align(
               alignment: Alignment.bottomRight,
               child: FloatingActionButton(

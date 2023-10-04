@@ -2,14 +2,9 @@
 
 import 'package:flutter/material.dart';
 
-class OneToOneScreen extends StatefulWidget {
+class OneToOneScreen extends StatelessWidget {
   const OneToOneScreen({super.key});
 
-  @override
-  State<OneToOneScreen> createState() => _OneToOneScreenState();
-}
-
-class _OneToOneScreenState extends State<OneToOneScreen> {
   @override
   Widget build(BuildContext context) {
     return Column(

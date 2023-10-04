@@ -4,14 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:hallo_app/screen/1to1.dart';
 import 'package:hallo_app/screen/group_screen.dart';
 
-class ExploreSCreen extends StatefulWidget {
+class ExploreSCreen extends StatelessWidget {
   const ExploreSCreen({super.key});
 
-  @override
-  State<ExploreSCreen> createState() => _ExploreSCreenState();
-}
-
-class _ExploreSCreenState extends State<ExploreSCreen> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(

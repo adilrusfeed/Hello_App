@@ -446,7 +446,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   ),
                                   const Text(
                                     'Describe yourself to followers',
-                                    style: TextStyle(color: Colors.grey),
                                   ),
                                   const SizedBox(
                                     height: 20,

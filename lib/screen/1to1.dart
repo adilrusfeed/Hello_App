@@ -58,7 +58,7 @@ class _OneToOneScreenState extends State<OneToOneScreen> {
                         image1: 'assets/images/july.webp',
                         image2: 'assets/images/canadaflag.jpeg',
                         text1: 'July',
-                        text2: '4.98(115)',
+                        text2: '     4.98(115)',
                         text3:
                             'Hi, i earned my Bachelor of Science in Business Management before raising four childern.\n Education is the important and powerful tool to change the world.'),
                     Divider(),
@@ -66,7 +66,7 @@ class _OneToOneScreenState extends State<OneToOneScreen> {
                       image1: 'assets/images/sebe.jpg',
                       image2: 'assets/images/flag_america.png',
                       text1: 'Sebe',
-                      text2: '4.78(188)',
+                      text2: '     4.78(188)',
                       text3:
                           'Its nice to meet you! My name is T.sebe I am a good listener with great communication skills.\n I have 2 years teaching expirience. i have better skilss in different area.',
                     ),
@@ -74,8 +74,8 @@ class _OneToOneScreenState extends State<OneToOneScreen> {
                     listview(
                       image1: 'assets/images/petricia.jpg',
                       image2: 'assets/images/flag_america.png',
-                      text1: 'Patricia',
-                      text2: '4.98s',
+                      text1: '      Patricia',
+                      text2: '     4.98s',
                       text3:
                           'Hi, iam Pratrica and i am a certified TEFL teacher,i hold a international level certificate of be3st teacher excellence award.',
                     ),
@@ -83,8 +83,8 @@ class _OneToOneScreenState extends State<OneToOneScreen> {
                     listview(
                       image1: 'assets/images/anitha.jpg',
                       image2: 'assets/images/flag_america.png',
-                      text1: 'Aradhi',
-                      text2: 't2',
+                      text1: '      Aradhi',
+                      text2: '     4.98s',
                       text3:
                           'Hi, iam Anitha and i am a certified TEFL teacher,i hold a international level certificate of be3st teacher excellence award.',
                     ),
@@ -157,6 +157,7 @@ class _OneToOneScreenState extends State<OneToOneScreen> {
                   )),
                   SizedBox(
                     height: 10,
+                    width: 10,
                   ),
                   Text(text2!)
                 ],

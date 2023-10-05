@@ -273,7 +273,7 @@ class ProfileScreen extends StatelessWidget {
                                     borderRadius: BorderRadius.circular(20),
                                     color: Colors.white,
                                   ),
-                                  width: 175,
+                                  width: 170,
                                   height: 140,
                                   child: const Column(
                                     children: [
@@ -318,6 +318,7 @@ class ProfileScreen extends StatelessWidget {
                             ],
                           ),
                           const Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Text('Resets weekly at 5:30AM on Sunday'),
                               Icon(Icons.info_outline)
@@ -386,12 +387,14 @@ class ProfileScreen extends StatelessWidget {
                     const SizedBox(
                       height: 10,
                     ),
-                    Container(
-                      alignment: Alignment.topLeft,
-                      child: const Text(
-                        ' Upcoming 0 classes',
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      ),
+                    const Row(
+                      children: [
+                        Text('Upcoming 0 classes'),
+                        Icon(
+                          Icons.hotel_class_rounded,
+                          size: 20,
+                        )
+                      ],
                     ),
                     const SizedBox(
                       height: 30,

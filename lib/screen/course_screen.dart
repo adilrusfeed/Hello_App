@@ -24,6 +24,7 @@ class CourseScreen extends StatelessWidget {
                     ),
                   ),
                 ),
+                Divider(),
                 sized(valueH: 1, valueW: 0),
 
                 //-------------------------top bars-------------------------------//

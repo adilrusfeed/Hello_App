@@ -1,7 +1,6 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, use_key_in_widget_constructors
 
 import 'package:flutter/material.dart';
-import 'package:hallo_app/screen/home_screen.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({Key? key});
@@ -30,6 +29,7 @@ class ProfileScreen extends StatelessWidget {
             child: ListView(
               children: [
                 ListTile(
+                  subtitle: Text('Hallo'),
                   title: Text(
                     'Settings',
                     style: TextStyle(
@@ -85,9 +85,13 @@ class ProfileScreen extends StatelessWidget {
                   children: [
                     Row(
                       children: [
-                        const CircleAvatar(
-                          radius: 60,
-                          backgroundImage: AssetImage('assets/images/SRK.jpg'),
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
+                          child: const CircleAvatar(
+                            radius: 60,
+                            backgroundImage:
+                                AssetImage('assets/images/SRK.jpg'),
+                          ),
                         ),
                         const SizedBox(
                           width: 30,
@@ -175,7 +179,7 @@ class ProfileScreen extends StatelessWidget {
                       ],
                     ),
                     Padding(
-                      padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
+                      padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
                       child: Container(
                         alignment: Alignment.topLeft,
                         child: Image.asset(

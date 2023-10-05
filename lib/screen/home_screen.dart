@@ -189,7 +189,7 @@ class _HomeScreenState extends State<HomeScreen> {
           name,
           style: TextStyle(
             fontSize: 13,
-            color: Colors.black,
+            color: Color.fromARGB(255, 0, 0, 0),
           ),
         )
       ],
@@ -208,8 +208,8 @@ class _HomeScreenState extends State<HomeScreen> {
       );
 
   Widget buildImage(String imagepath, int index) => Container(
-        margin: const EdgeInsets.symmetric(horizontal: 10),
-        color: Colors.grey,
+        margin: const EdgeInsets.symmetric(horizontal: 20),
+        color: Color.fromARGB(255, 60, 255, 0),
         child: Image.asset(
           imagepath,
           fit: BoxFit.fill,

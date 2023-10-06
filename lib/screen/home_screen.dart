@@ -98,6 +98,10 @@ class _HomeScreenState extends State<HomeScreen> {
                   circleavatar(image: "assets/images/akbar.jpg", name: "Akbar"),
                   circleavatar(
                       image: "assets/images/anitha.jpg", name: "Anitha"),
+                  circleavatar(image: "assets/images/ben.jpeg", name: "Ben"),
+                  circleavatar(image: "assets/images/july.webp", name: "July"),
+                  circleavatar(
+                      image: "assets/images/petricia.jpg", name: "Petricia"),
                 ],
               ),
               //-------------------------circle avatar----------------------//

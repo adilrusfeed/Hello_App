@@ -211,15 +211,12 @@ class GroupScreen extends StatelessWidget {
                           style: TextStyle(fontWeight: FontWeight.bold),
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 200),
-                        child: Container(
-                          child: Row(
-                            children: [
-                              Icon(Icons.star_outline_rounded),
-                              Icon(Icons.more_vert_rounded)
-                            ],
-                          ),
+                      Container(
+                        child: Row(
+                          children: [
+                            Icon(Icons.star_outline_rounded),
+                            Icon(Icons.more_vert_rounded)
+                          ],
                         ),
                       )
                     ],
@@ -227,9 +224,6 @@ class GroupScreen extends StatelessWidget {
                 ),
               ],
             ),
-          ),
-          SizedBox(
-            height: 10,
           ),
         ],
       ),
